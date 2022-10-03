@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout'
 import NoResults from '../components/NoResults';
-import { Input } from "@nextui-org/react";
+import { Button, Container, Input, Spacer } from "@nextui-org/react";
 import Results from '../components/Results';
 
 
@@ -9,6 +9,10 @@ export default function IndexPage() {
   
   const [searchTerm, setSearchTerm] = useState('');
   const [data, setData] = useState(null);
+  
+  const newPage = (newPageUrl: string) => {
+    fetch(newPageUrl).then((res) => res.json()).then((data) => { setData(data) });
+  }
 
   useEffect(() => {
     fetch(searchTerm !== '' ? `https://swapi.dev/api/people/?search=${searchTerm}` : 'https://swapi.dev/api/people')
@@ -32,6 +36,11 @@ export default function IndexPage() {
           data?.count === 0 && <NoResults/>
         }
       </div>
+      <Container fluid gap={0} justify='space-between' css={{ d: 'flex', padding: '1rem' }}>
+        <Button disabled={!data?.previous} auto bordered color='primary' onClick={ () => newPage(data?.previous) }>{'<'}</Button>
+        <Spacer x={2}/>
+        <Button disabled={!data?.next} auto bordered color='primary' onClick={ () => newPage(data?.next) }>{'>'}</Button>
+      </Container>
     </Layout>
   )
 }
