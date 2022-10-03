@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('../fonts/Starjhol.ttf') format('truetype')
+}
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Century Gothic', 'Copperplate Gothic', Arial, sans-serif, ;
+}
+
 .siteTitle {
     color: yellow;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Star Jedi', 'Roboto', sans-serif;
     font-weight: bold;
     text-align: center;
     padding: 4rem;
