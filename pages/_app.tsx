@@ -6,9 +6,9 @@ const theme = createTheme({
     type: "dark",
     theme: {
       colors: {
-        primaryLight: '$yellow200',
-        primaryLightHover: '$yellow300',
-        primaryLightActive: '$yellow400',
+        primaryLight: 'yellow',
+        primaryLightHover: 'yellow',
+        primaryLightActive: 'yellow',
         primaryLightContrast: '$yellow600',
         primary: 'yellow',
         primaryBorder: '$yellow500',
@@ -16,6 +16,8 @@ const theme = createTheme({
         primarySolidHover: '$yellow700',
         primarySolidContrast: '$white',
         primaryShadow: '$yellow500',
+
+        foreground: 'yellow',
   
         link: '#5E1DAD',
       },
