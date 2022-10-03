@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
+import Footer from './Footer'
 
 type Props = {
   children?: ReactNode
@@ -18,10 +19,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <div className='body'>
       {children}
     </div>
-    <footer>
-      <hr />
-      <span>Created by Nate Wolfe</span>
-    </footer>
+    <Footer />
   </div>
 )
 
