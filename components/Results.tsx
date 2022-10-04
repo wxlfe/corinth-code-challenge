@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Card, Collapse } from '@nextui-org/react'
+import { Collapse } from '@nextui-org/react'
 import Result from './Result'
 import { People, Person } from '../interfaces'
 
@@ -10,9 +10,7 @@ type Props = {
 const Results = ({ people }: Props) => (
   <Collapse.Group>
     { people.map((person: Person) => {
-      return <Collapse title={ person.name }>
-        <Result data={ person } />
-      </Collapse>
+      return <Result data={ person } />
     } )}
   </Collapse.Group>
 )

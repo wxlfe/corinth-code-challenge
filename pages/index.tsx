@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout'
 import NoResults from '../components/NoResults';
-import { Button, Container, Input, Spacer } from "@nextui-org/react";
+import { Button, Container, Input, Loading, Spacer } from "@nextui-org/react";
 import Results from '../components/Results';
+import { getNewPage, searchPeople } from '../utilities/gateway';
 
 
 export default function IndexPage() {
   
   const [searchTerm, setSearchTerm] = useState('');
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
   
   const newPage = (newPageUrl: string) => {
-    fetch(newPageUrl).then((res) => res.json()).then((data) => { setData(data) });
+    setLoading(true);
+    getNewPage(newPageUrl).then((data) => { 
+      setData(data);
+      setLoading(false);
+    });
   }
 
   useEffect(() => {
-    fetch(searchTerm !== '' ? `https://swapi.dev/api/people/?search=${searchTerm}` : 'https://swapi.dev/api/people')
-      .then((res) => res.json())
+    setLoading(true);
+    searchPeople(searchTerm)
       .then((data) => {
         setData(data);
+        setLoading(false)
       })
   }, [searchTerm])
 
@@ -37,9 +44,11 @@ export default function IndexPage() {
         }
       </div>
       <Container fluid gap={0} justify='space-between' css={{ d: 'flex', padding: '1rem' }}>
-        <Button disabled={!data?.previous} auto bordered color='primary' onClick={ () => newPage(data?.previous) }>{'<'}</Button>
+        <Button disabled={ !data?.previous || loading } auto bordered color='primary' onClick={ () => newPage(data?.previous) }>{ '<' }</Button>
         <Spacer x={2}/>
-        <Button disabled={!data?.next} auto bordered color='primary' onClick={ () => newPage(data?.next) }>{'>'}</Button>
+        { loading ? <Loading type='points-opacity' color='currentColor' /> : '' }
+        <Spacer x={2}/>
+        <Button disabled={ !data?.next || loading } auto bordered color='primary' onClick={ () => newPage(data?.next) }>{ '>' }</Button>
       </Container>
     </Layout>
   )
