@@ -1,7 +1,7 @@
 import { Button, Card, Collapse, Modal, Table, Text } from '@nextui-org/react';
-import FilmButton from './FilmButton';
-import { Person } from '../interfaces';
-import { getSpeciesDetails, getStarshipDetails } from '../utilities/gateway';
+import FilmButton from '../FilmButton';
+import { Person } from '../../interfaces';
+import { getSpeciesDetails, getStarshipDetails } from '../../utilities/gateway';
 import { useState } from 'react';
 
 type Props = {
@@ -35,7 +35,9 @@ const Result = ({ data }: Props) => {
       >
         <Card>
           <Card.Header>
-            <Text h3>About Me</Text>
+            <Text h3 aria-label='About Me'>
+              About Me
+            </Text>
           </Card.Header>
           <Card.Divider />
           <Card.Body>
@@ -73,7 +75,7 @@ const Result = ({ data }: Props) => {
                                 light
                                 color='primary'
                                 auto
-                                onClick={() => setSpeciesModalDetails(species)}
+                                onPress={() => setSpeciesModalDetails(species)}
                               >
                                 {species.name}
                               </Button>
@@ -90,7 +92,9 @@ const Result = ({ data }: Props) => {
         </Card>
         <Card>
           <Card.Header>
-            <Text h3>Films Appeared In</Text>
+            <Text h3 aria-label='Films Appeared In'>
+              Films Appeared In
+            </Text>
           </Card.Header>
           <Card.Divider />
           <Card.Body>
@@ -110,19 +114,21 @@ const Result = ({ data }: Props) => {
         {data.starships.length > 0 && (
           <Card>
             <Card.Header>
-              <Text h3>Starships Flown</Text>
+              <Text h3 aria-label='Starships Flown'>
+                Starships Flown
+              </Text>
             </Card.Header>
             <Card.Divider />
             <Card.Body>
               <ul>
-                {starshipDetails.map((details) => {
+                {starshipDetails.map((details, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <Button
                         light
                         color='primary'
                         auto
-                        onClick={() => setStarshipModalDetails(details)}
+                        onPress={() => setStarshipModalDetails(details)}
                       >
                         {details.name}
                       </Button>

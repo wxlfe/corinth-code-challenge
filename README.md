@@ -1,47 +1,64 @@
-# TypeScript Next.js example
+# Corinth Code Challenge
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+This is a Next.js frontend for the SWAPI API, providing a searchable list of Star Wars characters.
 
-## Deploy your own
+## Netlify
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+A live version of the project is available at [corinth-code-challenge.netlify.app](https://corinth-code-challenge.netlify.app).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+## Build
 
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-```
+Building follows a normal Next.js process.
+First, run
 
 ```bash
-yarn create next-app --example with-typescript with-typescript-app
+npm i
 ```
+
+or
 
 ```bash
-pnpm create next-app --example with-typescript with-typescript-app
+yarn
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+then build to a dev server or a production build.
 
-## Notes
+### Dev Server
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
+```bash
+npm run dev
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+or
 
+```bash
+yarn dev
 ```
-npm install --save-dev @types/react @types/react-dom @types/node
+
+### Build
+
+```bash
+npm run build
 ```
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+or
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+```bash
+yarn build
+```
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+### Test Using Jest
+
+Jest is available for running tests via
+
+```bash
+npm run test
+```
+
+or
+
+```bash
+yarn test
+```
+
+Though there aren't many tests available, this is what I would improve if I could improve any one thing.

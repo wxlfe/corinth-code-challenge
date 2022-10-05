@@ -1,6 +1,6 @@
 import { Button, Modal, Table, Text } from '@nextui-org/react';
 import { useState } from 'react';
-import { getFilmDetails } from '../utilities/gateway';
+import { getFilmDetails } from '../../utilities/gateway';
 
 type Props = {
   film: string;
@@ -47,7 +47,7 @@ const FilmButton = ({ film }: Props) => {
 
   return (
     <>
-      <Button auto bordered color='primary' onClick={() => openModal(film)}>
+      <Button auto bordered color='primary' onPress={() => openModal(film)}>
         {label}
       </Button>
       <Modal

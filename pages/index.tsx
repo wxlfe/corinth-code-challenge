@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import NoResults from '../components/NoResults';
+import { Layout, NoResults, Results } from '../components';
 import {
   Button,
   Container,
@@ -9,7 +8,6 @@ import {
   Spacer,
   Text,
 } from '@nextui-org/react';
-import Results from '../components/Results';
 import { getNewPage, searchPeople } from '../utilities/gateway';
 
 export default function IndexPage() {
@@ -83,7 +81,7 @@ export default function IndexPage() {
           auto
           bordered
           color='primary'
-          onClick={() => newPage(data?.previous)}
+          onPress={() => newPage(data?.previous)}
         >
           {'<'}
         </Button>
@@ -95,7 +93,7 @@ export default function IndexPage() {
           auto
           bordered
           color='primary'
-          onClick={() => newPage(data?.next)}
+          onPress={() => newPage(data?.next)}
         >
           {'>'}
         </Button>
