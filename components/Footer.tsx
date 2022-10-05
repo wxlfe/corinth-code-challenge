@@ -1,4 +1,4 @@
-import { Container, Dropdown, Link, Spacer, Text } from '@nextui-org/react';
+import { Container, Link, Text } from '@nextui-org/react';
 
 const Footer = () => {
   return (
