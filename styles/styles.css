@@ -1,50 +1,51 @@
 @font-face {
-    font-family: 'Star Jedi';
-    src: url('../fonts/Starjhol.ttf') format('truetype')
+  font-family: 'Star Jedi';
+  src: url('../fonts/Starjhol.ttf') format('truetype');
 }
 
 * {
-    font-family: 'Franklin Gothic Medium', 'Century Gothic', 'Copperplate Gothic', Arial, sans-serif, ;
+  font-family: 'Franklin Gothic Medium', 'Century Gothic', 'Copperplate Gothic',
+    Arial, sans-serif;
 }
 
 .siteTitle {
-    color: yellow;
-    font-family: 'Star Jedi', 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    padding: 4rem;
+  color: yellow;
+  font-family: 'Star Jedi', 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 4rem;
 }
 
 .search-bar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .no-results-header {
-    color: yellow;
-    text-align: center;
-    padding-top: 1rem;
+  color: yellow;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .no-results-body {
-    color: yellow;
-    text-align: center;
-    padding-bottom: 1rem;
+  color: yellow;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .result {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
 }
 
 .film-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-gap: 1rem;
 }
 
 #modal-title {
-    font-family: 'Star Jedi', 'Roboto', sans-serif;
+  font-family: 'Star Jedi', 'Roboto', sans-serif;
 }
