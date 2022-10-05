@@ -40,14 +40,10 @@ const getSpecies = (urls: string[]) => {
     })
 }
 
-const getSpeciesNames = (urls: string[]) => {
-    let names = [];
-    Promise.all(urls.map((url: string) => {
-        return fetch(url).then((res) => res.json());
-    })).then((responses) => {
-        names = responses;
-    })
-    return names;
+const getSpeciesDetails = (urls: string[]) => {
+    let requests = urls.map(url => fetch(url));
+    const res = Promise.all(requests).then((responses) => Promise.all(responses.map(r => r.json())));
+    return res;
 }
 
 const getStarshipDetails = (urls: string[]) => {
@@ -63,6 +59,6 @@ export {
     getNewPage,
     searchPeople,
     getSpecies,
-    getSpeciesNames,
+    getSpeciesDetails,
     getStarshipDetails
 }
