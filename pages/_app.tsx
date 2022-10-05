@@ -1,6 +1,6 @@
 // 1. import `NextUIProvider` component
 import { createTheme, NextUIProvider } from '@nextui-org/react';
-import '../styles/styles.css';
+import '../fonts/fonts.css';
 
 const theme = createTheme({
   type: 'dark',

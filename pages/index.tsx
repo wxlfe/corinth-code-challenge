@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import NoResults from '../components/NoResults';
-import { Button, Container, Input, Loading, Spacer } from '@nextui-org/react';
+import {
+  Button,
+  Container,
+  Input,
+  Loading,
+  Spacer,
+  Text,
+} from '@nextui-org/react';
 import Results from '../components/Results';
 import { getNewPage, searchPeople } from '../utilities/gateway';
 
@@ -28,8 +35,25 @@ export default function IndexPage() {
 
   return (
     <Layout title='Corinth Code Challenge'>
-      <h1 className='siteTitle'>Corinth</h1>
-      <div className='search-bar-container'>
+      <Text
+        h1
+        color='primary'
+        weight='bold'
+        css={{
+          fontFamily: "'Star Jedi', 'Roboto', sans-serif",
+          textAlign: 'center',
+          padding: '4rem',
+        }}
+      >
+        Corinth
+      </Text>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}
+      >
         <Input
           className='search-bar'
           rounded

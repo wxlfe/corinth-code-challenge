@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('../fonts/Starjhol.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Century Gothic', 'Copperplate Gothic',
+    Arial, sans-serif;
+}

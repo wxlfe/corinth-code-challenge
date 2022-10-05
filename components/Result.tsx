@@ -26,7 +26,13 @@ const Result = ({ data }: Props) => {
 
   return (
     <Collapse title={data.name} key={data.name} onClick={() => resultOpened()}>
-      <div className='result'>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridGap: '1rem',
+        }}
+      >
         <Card>
           <Card.Header>
             <Text h3>About Me</Text>
@@ -88,7 +94,13 @@ const Result = ({ data }: Props) => {
           </Card.Header>
           <Card.Divider />
           <Card.Body>
-            <div className='film-buttons'>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(90px, 1fr))',
+                gridGap: '1rem',
+              }}
+            >
               {data.films.map((film, index) => {
                 return <FilmButton film={film} key={index}></FilmButton>;
               })}
@@ -131,7 +143,13 @@ const Result = ({ data }: Props) => {
         onClose={() => setStarshipModalDetails(null)}
       >
         <Modal.Header>
-          <Text id='modal-title' h2 size={18} color='primary'>
+          <Text
+            id='modal-title'
+            h2
+            size={18}
+            color='primary'
+            css={{ fontFamily: "'Star Jedi', 'Roboto', sans-serif" }}
+          >
             {starshipModalDetails?.name}
           </Text>
         </Modal.Header>
@@ -207,7 +225,13 @@ const Result = ({ data }: Props) => {
         onClose={() => setStarshipModalDetails(null)}
       >
         <Modal.Header>
-          <Text id='modal-title' h2 size={18} color='primary'>
+          <Text
+            id='modal-title'
+            h2
+            size={18}
+            color='primary'
+            css={{ fontFamily: "'Star Jedi', 'Roboto', sans-serif" }}
+          >
             {speciesModalDetails?.name}
           </Text>
         </Modal.Header>

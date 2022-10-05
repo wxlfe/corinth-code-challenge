@@ -59,7 +59,13 @@ const FilmButton = ({ film }: Props) => {
         onClose={() => setModalOpen(false)}
       >
         <Modal.Header>
-          <Text id='modal-title' h2 size={18} color='primary'>
+          <Text
+            id='modal-title'
+            h2
+            size={18}
+            color='primary'
+            css={{ fontFamily: "'Star Jedi', 'Roboto', sans-serif" }}
+          >
             {filmDetails?.title}
           </Text>
         </Modal.Header>
