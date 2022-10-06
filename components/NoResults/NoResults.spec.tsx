@@ -11,4 +11,9 @@ describe('No Results Component', () => {
     const { asFragment } = render(<NoResults />);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  test('should say No Results Found', () => {
+    const { asFragment } = render(<NoResults />);
+    expect(asFragment()).toHaveTextContent('No Results Found');
+  });
 });

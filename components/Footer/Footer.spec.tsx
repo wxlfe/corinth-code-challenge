@@ -11,4 +11,9 @@ describe('Footer Component', () => {
     const { asFragment } = render(<Footer></Footer>);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  test('should contain portfolio link', () => {
+    const { asFragment } = render(<Footer></Footer>);
+    expect(asFragment()).toHaveTextContent('Created by Nate Wolfe');
+  });
 });

@@ -60,5 +60,3 @@ or
 ```bash
 yarn test
 ```
-
-Though there aren't many tests available, this is what I would improve if I could improve any one thing.

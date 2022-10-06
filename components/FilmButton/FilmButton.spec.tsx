@@ -13,4 +13,11 @@ describe('FilmButton Component', () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
+
+  test('should render a label', () => {
+    const { asFragment } = render(
+      <FilmButton film='https://swapi.dev/api/films/1/'></FilmButton>
+    );
+    expect(asFragment()).toHaveTextContent('IV');
+  });
 });
