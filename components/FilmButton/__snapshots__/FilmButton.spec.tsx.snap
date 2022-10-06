@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmButton Component should render 1`] = `
+<DocumentFragment>
+  <button
+    class="nextui-c-iWjDFM nextui-c-PJLV nextui-c-iWjDFM-iaomLu-bordered-true nextui-c-iWjDFM-hkKLfu-color-primary nextui-c-iWjDFM-gkIlwi-size-md nextui-c-iWjDFM-cwXrJp-borderWeight-normal nextui-c-iWjDFM-exaRme-auto-true nextui-c-iWjDFM-gglxka-cv nextui-c-iWjDFM-hKBzkL-cv nextui-c-PJLV-gulvcB-isFocusVisible-false nextui-c-iWjDFM-iPJLV-css nextui-button nextui-button--ready"
+    data-state="ready"
+    type="button"
+  >
+    <span
+      class="nextui-button-text"
+    >
+      IV
+    </span>
+  </button>
+</DocumentFragment>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Component should render 1`] = `
+<DocumentFragment>
+  <div>
+    <header />
+    <div
+      class="body"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+    <footer>
+      <hr />
+      <div
+        class="nextui-c-fdHeMm nextui-c-fdHeMm-cFpcyF-fluid-true nextui-c-fdHeMm-dwxLNB-responsive-true nextui-c-fdHeMm-iiuOaOp-css"
+      >
+        <a
+          class="nextui-c-dIWzTP nextui-c-PJLV nextui-c-dIWzTP-hQWhoE-color-primary nextui-c-dIWzTP-isWIbj-animated-true nextui-c-PJLV-gulvcB-isFocusVisible-false nextui-c-dIWzTP-ivnGVk-css nextui-link"
+          href="https://wxlfe.dev"
+        >
+          <h3
+            class="nextui-c-PJLV nextui-c-PJLV-ihoHSOW-css"
+          >
+            Created by Nate Wolfe
+          </h3>
+        </a>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

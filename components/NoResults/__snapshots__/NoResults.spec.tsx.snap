@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No Results Component should render 1`] = `
+<DocumentFragment>
+  <h3
+    class="nextui-c-PJLV nextui-c-PJLV-isiIAY-css"
+  >
+    No Results Found
+  </h3>
+  <p
+    class="nextui-c-PJLV nextui-c-PJLV-ifVnRkg-css"
+  >
+    If an item does not appear in our records, it does not exist.
+  </p>
+</DocumentFragment>
+`;
