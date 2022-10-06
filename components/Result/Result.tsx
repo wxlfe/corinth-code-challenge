@@ -41,7 +41,7 @@ const Result = ({ data }: Props) => {
           </Card.Header>
           <Card.Divider />
           <Card.Body>
-            <Table>
+            <Table aria-label='About Me Table'>
               <Table.Header>
                 <Table.Column>Attribute</Table.Column>
                 <Table.Column>Value</Table.Column>
