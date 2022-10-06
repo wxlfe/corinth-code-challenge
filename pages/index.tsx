@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Layout, NoResults, Results } from '../components';
 import {
   Button,
   Container,
@@ -9,6 +8,7 @@ import {
   Text,
 } from '@nextui-org/react';
 import { getNewPage, searchPeople } from '../utilities/gateway';
+import { Layout, NoResults, Results } from '../components';
 
 export default function IndexPage() {
   const [searchTerm, setSearchTerm] = useState('');

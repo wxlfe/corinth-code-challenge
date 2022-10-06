@@ -21,6 +21,22 @@ const getNewPage = (newPageUrl?: string): Promise<SearchResults> => {
   }
 };
 
+const getSpeciesDetails = (urls: string[]): Promise<Species[]> => {
+  let requests = urls.map((url) => fetch(url));
+  const res = Promise.all(requests).then((responses) =>
+    Promise.all(responses.map((r) => r.json()))
+  );
+  return res;
+};
+
+const getStarshipDetails = (urls: string[]): Promise<Starship[]> => {
+  let requests = urls.map((url) => fetch(url));
+  const res = Promise.all(requests).then((responses) =>
+    Promise.all(responses.map((r) => r.json()))
+  );
+  return res;
+};
+
 const searchPeople = (searchTerm?: string): Promise<SearchResults> => {
   if (searchTerm === '') {
     if (!!loadedPages['https://swapi.dev/api/people/?page=1']) {
@@ -38,26 +54,10 @@ const searchPeople = (searchTerm?: string): Promise<SearchResults> => {
   }
 };
 
-const getSpeciesDetails = (urls: string[]): Promise<Species[]> => {
-  let requests = urls.map((url) => fetch(url));
-  const res = Promise.all(requests).then((responses) =>
-    Promise.all(responses.map((r) => r.json()))
-  );
-  return res;
-};
-
-const getStarshipDetails = (urls: string[]): Promise<Starship[]> => {
-  let requests = urls.map((url) => fetch(url));
-  const res = Promise.all(requests).then((responses) =>
-    Promise.all(responses.map((r) => r.json()))
-  );
-  return res;
-};
-
 export {
   getFilmDetails,
   getNewPage,
-  searchPeople,
   getSpeciesDetails,
   getStarshipDetails,
+  searchPeople,
 };

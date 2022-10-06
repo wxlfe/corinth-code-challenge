@@ -1,5 +1,5 @@
-import { Button, Modal, Table, Text } from '@nextui-org/react';
 import { useState } from 'react';
+import { Button, Modal, Table, Text } from '@nextui-org/react';
 import { getFilmDetails } from '../../utilities/gateway';
 
 type Props = {

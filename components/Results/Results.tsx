@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Collapse } from '@nextui-org/react';
-import Result from '../Result';
 import { Person } from '../../interfaces';
+import Result from '../Result';
 
 type Props = {
   people: Person[];

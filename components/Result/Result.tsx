@@ -1,8 +1,8 @@
+import { useState } from 'react';
 import { Button, Card, Collapse, Modal, Table, Text } from '@nextui-org/react';
-import FilmButton from '../FilmButton';
 import { Person } from '../../interfaces';
 import { getSpeciesDetails, getStarshipDetails } from '../../utilities/gateway';
-import { useState } from 'react';
+import FilmButton from '../FilmButton';
 
 type Props = {
   data: Person;
