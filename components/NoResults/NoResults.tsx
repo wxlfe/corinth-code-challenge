@@ -1,6 +1,10 @@
 import { Text } from '@nextui-org/react';
 
-const NoResults = () => {
+type Props = {
+  overrideOption?: number;
+};
+
+const NoResults = ({ overrideOption }: Props) => {
   const options = [
     'If an item does not appear in our records, it does not exist.',
     "These are not the results you're looking for.",
@@ -21,7 +25,11 @@ const NoResults = () => {
         color='primary'
         css={{ textAlign: 'center', paddingBottom: '1rem' }}
       >
-        {options[Math.floor(Math.random() * 4)]}
+        {
+          options[
+            !overrideOption ? Math.floor(Math.random() * 4) : overrideOption
+          ]
+        }
       </Text>
     </>
   );

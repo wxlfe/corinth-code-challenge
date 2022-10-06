@@ -10,7 +10,7 @@ exports[`No Results Component should render 1`] = `
   <p
     class="nextui-c-PJLV nextui-c-PJLV-ifVnRkg-css"
   >
-    If an item does not appear in our records, it does not exist.
+    These are not the results you're looking for.
   </p>
 </DocumentFragment>
 `;

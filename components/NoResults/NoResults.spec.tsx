@@ -8,7 +8,7 @@ describe('No Results Component', () => {
   });
 
   test('should render', () => {
-    const { asFragment } = render(<NoResults />);
+    const { asFragment } = render(<NoResults overrideOption={1} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
